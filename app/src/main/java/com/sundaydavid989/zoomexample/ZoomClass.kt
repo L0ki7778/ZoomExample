@@ -195,13 +195,14 @@ class ZoomClass : AppCompatImageView, View.OnTouchListener,
     override fun onSingleTapUp(motionEvent: MotionEvent): Boolean {
         return false
     }
-
-    override fun onScroll(motionEvent: MotionEvent, motionEvent1: MotionEvent, v: Float, v1: Float): Boolean {
+    // after adjusting the parameter to match the signature of "GestureDetector.OnGestureListener" everything worked just fine! Many thanks for your code! Saved a lot of time :)
+    override fun onScroll(p0: MotionEvent?, p1: MotionEvent, p2: Float, p3: Float)): Boolean {
         return false
     }
 
     override fun onLongPress(motionEvent: MotionEvent) {}
-    override fun onFling(motionEvent: MotionEvent, motionEvent1: MotionEvent, v: Float, v1: Float): Boolean {
+    // adjusting here as well
+    override fun onFling(p0: MotionEvent?, p1: MotionEvent, p2: Float, p3: Float)): Boolean {
         return false
     }
 
